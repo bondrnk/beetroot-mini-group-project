@@ -1,60 +1,11 @@
-/* fonts */
-@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&display=swap");
-
 * {
   margin: 0;
   padding: 0;
+  font-family: "Ubuntu", sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
-body {
-  color: #000;
-  font-family: "Montserrat", sans-serif;
-  font-size: 16pxpx;
-}
-
-.icon {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  stroke: currentColor;
-  fill: currentColor;
-}
-
-.icon:not(.has-stroke) {
-  stroke-width: 0;
-}
-
-*::-moz-selection {
-  background-color: rgba(253, 128, 97, 0.3);
-}
-
-*::selection {
-  background-color: rgba(253, 128, 97, 0.3);
-}
-
-*::-webkit-scrollbar {
-  border-radius: 10px;
-  position: relative;
-  z-index: 999;
-  width: 6px;
-}
-
-*::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 3px rgba(253, 128, 97, 0.8);
-  box-shadow: inset 0 0 3px rgba(253, 128, 97, 0.8);
-  background-color: rgba(253, 128, 97, 0.3);
-  border-radius: 10px;
-}
-
-*::-webkit-scrollbar-thumb {
-  -webkit-box-shadow: inset 0 0 3px rgba(253, 128, 97, 0.8);
-  box-shadow: inset 0 0 3px rgba(253, 128, 97, 0.8);
-  background-color: #fd8061;
-  border-radius: 10px;
-  outline: none;
-}
-/* link */
 a {
   text-decoration: none;
 }
@@ -64,17 +15,8 @@ a {
   color: #fff;
 }
 
-/* Header */
-
 .header__wrapper {
   position: relative;
-}
-
-.header__bg {
-  height: 900px;
-  background: url(./img/bg.png) no-repeat top center;
-  background-size: 100%;
-  background-size: cover;
 }
 
 /* Navigation */
@@ -222,85 +164,128 @@ a {
   }
 }
 
-/* Section №1 - Migda    */
-
-.volmig-general-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.volmig-profile {
+  height: 100vh;
+  background: url(bg.jpg) no-repeat center;
+  background-size: cover;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.volmig-general-info__wrapper {
-  position: absolute;
-  top: 320px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  justify-content: center;
 }
 
-@media (max-width: 768px) {
-  .volmig-general-info__wrapper {
-    top: 220px;
+.volmig-profile-card {
+  width: 400px;
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.volmig-card-header {
+  background: #2c3a47;
+  padding: 60px 40px;
+}
+
+.volmig-pic {
+  display: inline-block;
+  padding: 8px;
+  background: linear-gradient(130deg, #74b9ff, #e66767);
+  margin: auto;
+  border-radius: 50%;
+  background-size: 200% 200%;
+  animation: animated-gradient 2s linear infinite;
+}
+
+@keyframes animated-gradient {
+  25% {
+    background-position: left bottom;
+  }
+  50% {
+    background-position: right bottom;
+  }
+  75% {
+    background-position: right top;
+  }
+  100% {
+    background-position: left top;
   }
 }
 
-.volmig-general-info__subtitle {
-  width: 175px;
-  height: 20px;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  text-align: center;
-  color: #ffffff;
-  margin-bottom: 20px;
+.volmig-pic img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 
-.volmig-general-info__title {
-  max-width: 830px;
-  min-height: 110px;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 48px;
-  text-align: center;
-  color: #ffffff;
-  margin-bottom: 50px;
+.volmig-name {
+  color: #f2f2f2;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 10px 0;
 }
 
-@media (max-width: 768px) {
-  .volmig-general-info__title {
-    font-size: 32px;
-  }
+.volmig-desc {
+  font-size: 18px;
+  color: #e66767;
 }
 
-.volmig-general-info__link {
-  width: 200px;
-  height: 45px;
-  background: #4985ff;
-  -webkit-box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
-  box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
-  border-radius: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
+.volmig-sm {
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
+  margin: 20px 0;
+}
+
+.volmig-sm a {
+  color: #f2f2f2;
+  width: 56px;
+  font-size: 22px;
+  transition: 0.3s linear;
+}
+
+.volmig-sm a:hover {
+  color: #e66767;
+}
+
+.volmig-contact-btn {
+  display: inline-block;
+  padding: 12px 50px;
+  color: #e66767;
+  border: 2px solid #e66767;
+  border-radius: 6px;
+  margin-top: 16px;
+  transition: 0.3s linear;
+}
+
+.volmig-contact-btn:hover {
+  background: #e66767;
+  color: #f2f2f2;
+}
+
+.volmig-card-footer {
+  background: #f4f4f4;
+  padding: 60px 10px;
+}
+
+.volmig-numbers {
+  display: flex;
+  align-items: center;
+}
+
+.volmig-item {
+  flex: 1;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #e66767;
+}
+
+.volmig-item span {
+  display: block;
+  color: #2c3a47;
+  font-size: 30px;
+}
+
+.volmig-border {
+  width: 1px;
+  height: 30px;
+  background: #bbb;
 }
