@@ -304,3 +304,104 @@ a {
   -ms-flex-pack: center;
   justify-content: center;
 }
+
+/* ! Section №2 - Ann */
+
+/* Form */
+
+.ann-l-contact-us {
+  padding: 200px 0 150px;
+
+  font-family: "Montserrat", sans-serif;
+  background-color: #39445f;
+  font-weight: 500;
+  color: white;
+}
+
+.ann-l-contact-us__wrapper {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.ann-title {
+  margin-bottom: 40px;
+
+  text-align: center;
+  font-weight: 600;
+  font-size: 34px;
+}
+
+.ann-c-contact-us {
+  min-width: 330px;
+}
+
+.ann-c-contact-us__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.ann-c-contact-us__item {
+  width: 100%;
+
+  margin-bottom: 35px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+  font-size: 14px;
+}
+
+.ann-c-contact-us__item__title {
+  padding: 5px 0;
+
+  font-size: 12px;
+}
+
+.ann-c-contact-us__input {
+  width: 100%;
+
+  padding: 5px 0;
+
+  background-color: transparent;
+  outline: none;
+  border: none;
+  opacity: 0.5;
+}
+
+.ann-c-contact-us__input:enabled {
+  color: white;
+}
+
+.ann-c-contact-us__textarea {
+  height: 80px;
+  width: 100%;
+
+  padding: 5px 0;
+
+  background-color: transparent;
+  outline: none;
+  resize: none;
+  border: none;
+  opacity: 0.5;
+}
+
+.ann-c-contact-us__textarea:enabled {
+  color: white;
+}
+
+/* Button */
+
+.ann-c-contact-us__button {
+  width: fit-content;
+
+  align-self: center;
+  padding: 14px 40px;
+
+  border-radius: 30px;
+  border: none;
+
+  background-color: #4985ff;
+  font-size: 16px;
+  color: white;
+}
